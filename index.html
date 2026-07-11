@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO : positionnement « cas d'usage IA par métier », distinct de jeremyai.fr (services & SEO local) -->
+  <title>L'IA par métier — Ce que l'intelligence artificielle peut faire pour votre activité | jeremyai.tech</title>
+  <meta name="description" content="Découvrez concrètement ce que l'IA peut faire pour votre métier : plombier, agent immobilier, restaurateur, thérapeute, avocat, commerçant… Des cas d'usage réels, secteur par secteur.">
+  <meta name="keywords" content="IA par métier, IA pour plombier, IA pour agent immobilier, IA pour restaurateur, IA pour artisan, IA pour avocat, IA pour commerçant, cas d'usage intelligence artificielle, IA secteur activité">
+  <meta name="author" content="Jérémy GONIN">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.jeremyai.tech/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jeremyai.tech/">
+  <meta property="og:site_name" content="L'IA par métier — jeremyai.tech">
+  <meta property="og:title" content="L'IA par métier — Ce que l'IA peut faire pour votre activité">
+  <meta property="og:description" content="Cas d'usage concrets de l'intelligence artificielle, secteur par secteur : artisans, immobilier, commerce, santé, services…">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@jeremygonin_ia">
+  <meta name="theme-color" content="#05060f">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "L'IA par métier",
+    "url": "https://www.jeremyai.tech/",
+    "description": "Cas d'usage concrets de l'intelligence artificielle par secteur d'activité",
+    "author": {
+      "@type": "Person",
+      "name": "Jérémy GONIN",
+      "url": "https://www.jeremyai.fr/",
+      "sameAs": ["https://www.jeremyai.fr/"]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #05060f;
+      --cyan: #22d3ee;
+      --violet: #a78bfa;
+      --magenta: #e879f9;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --card: rgba(15, 20, 40, 0.6);
+      --border: rgba(34, 211, 238, 0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* ===== Fond réseau neuronal ===== */
+    #neural-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+
+    /* ===== Couches parallax ===== */
+    .parallax-layer { position: fixed; inset: 0; z-index: 1; pointer-events: none; will-change: transform; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.35; }
+    .orb-1 { width: 45vw; height: 45vw; background: radial-gradient(circle, var(--violet), transparent 70%); top: -10%; left: -12%; }
+    .orb-2 { width: 38vw; height: 38vw; background: radial-gradient(circle, var(--cyan), transparent 70%); top: 55%; right: -10%; }
+    .orb-3 { width: 30vw; height: 30vw; background: radial-gradient(circle, var(--magenta), transparent 70%); top: 130%; left: 10%; }
+    .orb-4 { width: 40vw; height: 40vw; background: radial-gradient(circle, var(--cyan), transparent 70%); top: 220%; right: 20%; }
+    .grid-layer {
+      position: fixed; inset: 0; z-index: 1; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(34,211,238,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34,211,238,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 75%);
+      will-change: transform;
+    }
+
+    main { position: relative; z-index: 2; }
+    section {
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 6rem 1.5rem;
+      max-width: 1150px; margin: 0 auto;
+    }
+    section.hero { min-height: 100vh; text-align: center; }
+
+    /* ===== Nav ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(5, 6, 15, 0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: var(--cyan); }
+    @media (max-width: 640px) { nav ul { display: none; } }
+
+    /* ===== Hero ===== */
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 1rem; border: 1px solid var(--border); border-radius: 999px;
+      font-size: 0.8rem; color: var(--cyan); background: var(--card); margin-bottom: 1.5rem;
+    }
+    h1 { font-size: clamp(2.2rem, 6.5vw, 4.2rem); line-height: 1.12; font-weight: 800; margin-bottom: 1.2rem; }
+    .gradient-text {
+      background: linear-gradient(90deg, var(--cyan) 0%, var(--violet) 50%, var(--magenta) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .subtitle { color: var(--muted); font-size: clamp(1rem, 2.5vw, 1.2rem); max-width: 640px; margin: 0 auto 2.5rem; }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 0.85rem 1.8rem; border-radius: 10px; text-decoration: none;
+      font-weight: 600; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      color: #05060f; box-shadow: 0 0 25px rgba(34, 211, 238, 0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(34, 211, 238, 0.5); }
+    .btn-ghost { border: 1px solid var(--border); color: var(--text); background: var(--card); }
+    .btn-ghost:hover { border-color: var(--cyan); transform: translateY(-2px); }
+
+    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 1rem; text-align: center; }
+    .section-sub { color: var(--muted); text-align: center; max-width: 640px; margin-bottom: 2.5rem; }
+
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== Chiffres clés ===== */
+    .stats { display: flex; gap: 2.5rem; flex-wrap: wrap; justify-content: center; margin-top: 3.5rem; }
+    .stat { text-align: center; }
+    .stat strong {
+      display: block; font-size: 2.2rem; font-weight: 800;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .stat span { color: var(--muted); font-size: 0.85rem; }
+
+    /* ===== Filtres ===== */
+    .filters { display: flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem; }
+    .filter-btn {
+      padding: 0.5rem 1.2rem; border-radius: 999px; cursor: pointer;
+      border: 1px solid var(--border); background: var(--card); color: var(--muted);
+      font-size: 0.85rem; transition: all 0.2s;
+    }
+    .filter-btn:hover { color: var(--cyan); border-color: var(--cyan); }
+    .filter-btn.active {
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      color: #05060f; font-weight: 600; border-color: transparent;
+    }
+
+    /* ===== Cartes métiers ===== */
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; width: 100%; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.8rem; backdrop-filter: blur(8px);
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(34, 211, 238, 0.5);
+      box-shadow: 0 10px 40px rgba(34, 211, 238, 0.15);
+    }
+    .card.hidden { display: none; }
+    .card-head { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+    .card-head .icon { font-size: 1.9rem; }
+    .card h3 { font-size: 1.15rem; }
+    .card ul { list-style: none; }
+    .card li {
+      color: var(--muted); font-size: 0.9rem; padding: 0.35rem 0 0.35rem 1.4rem; position: relative;
+    }
+    .card li::before { content: '▸'; position: absolute; left: 0; color: var(--cyan); }
+    .card .tag {
+      display: inline-block; margin-top: 1rem; padding: 0.2rem 0.7rem;
+      font-size: 0.72rem; border-radius: 999px; border: 1px solid var(--border); color: var(--violet);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      position: relative; z-index: 2; text-align: center; padding: 3rem 1.5rem;
+      color: var(--muted); font-size: 0.85rem;
+      border-top: 1px solid var(--border); background: rgba(5, 6, 15, 0.8);
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="neural-bg" aria-hidden="true"></canvas>
+  <div class="grid-layer" data-speed="0.15" aria-hidden="true"></div>
+  <div class="parallax-layer" data-speed="0.3" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="parallax-layer" data-speed="0.5" aria-hidden="true">
+    <div class="orb orb-2"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <nav>
+    <div class="logo">JEREMYAI.TECH</div>
+    <ul>
+      <li><a href="#pourquoi">Pourquoi l'IA</a></li>
+      <li><a href="#secteurs">Votre métier</a></li>
+      <li><a href="#contact">Passer à l'action</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+      <div class="badge">✦ Cas d'usage concrets, métier par métier</div>
+      <h1>Ce que l'IA peut faire<br>pour <span class="gradient-text">votre métier</span></h1>
+      <p class="subtitle">Plombier, agent immobilier, restaurateur, thérapeute, avocat… L'intelligence artificielle n'est pas réservée aux grandes entreprises. Découvrez ce qu'elle peut automatiser, simplifier et accélérer dans <strong>votre</strong> quotidien.</p>
+      <div class="cta-row">
+        <a href="#secteurs" class="btn btn-primary">Trouver mon métier</a>
+        <a href="#pourquoi" class="btn btn-ghost">Pourquoi maintenant ?</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>5-10 h</strong><span>gagnées par semaine en moyenne</span></div>
+        <div class="stat"><strong>12+</strong><span>métiers couverts sur ce site</span></div>
+        <div class="stat"><strong>0 €</strong><span>pour la plupart des outils de départ</span></div>
+      </div>
+    </section>
+
+    <!-- ===== POURQUOI ===== -->
+    <section id="pourquoi">
+      <h2 class="reveal">Pourquoi l'IA, <span class="gradient-text">pourquoi maintenant</span> ?</h2>
+      <p class="section-sub reveal">Trois raisons simples pour lesquelles les indépendants et TPE ont tout à y gagner.</p>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="card-head"><span class="icon">⏱️</span><h3>Du temps récupéré</h3></div>
+          <ul>
+            <li>Les tâches répétitives (devis, mails, relances, planning) sont celles que l'IA fait le mieux</li>
+            <li>Chaque heure administrative automatisée est une heure facturable de plus</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="card-head"><span class="icon">💶</span><h3>Accessible sans budget</h3></div>
+          <ul>
+            <li>La plupart des outils IA ont une version gratuite ou coûtent moins qu'un repas par mois</li>
+            <li>Pas besoin de compétences techniques pour commencer</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="card-head"><span class="icon">🚀</span><h3>Un avantage concurrentiel</h3></div>
+          <ul>
+            <li>Répondre en 5 minutes quand le concurrent répond en 2 jours change tout</li>
+            <li>Ceux qui s'y mettent maintenant prennent une longueur d'avance durable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTEURS ===== -->
+    <section id="secteurs">
+      <h2 class="reveal">Trouvez <span class="gradient-text">votre secteur</span></h2>
+      <p class="section-sub reveal">Des exemples concrets d'utilisation de l'IA, métier par métier. Filtrez par catégorie.</p>
+
+      <div class="filters reveal" role="group" aria-label="Filtrer par catégorie">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="artisan">Artisans & BTP</button>
+        <button class="filter-btn" data-filter="immo">Immobilier & commerce</button>
+        <button class="filter-btn" data-filter="resto">Restauration & beauté</button>
+        <button class="filter-btn" data-filter="sante">Santé & bien-être</button>
+        <button class="filter-btn" data-filter="services">Services pro</button>
+      </div>
+
+      <div class="cards" id="metiers">
+        <div class="card reveal" data-cat="artisan">
+          <div class="card-head"><span class="icon">🔧</span><h3>Plombier / Chauffagiste</h3></div>
+          <ul>
+            <li>Devis générés en 2 minutes depuis une photo ou une description du chantier</li>
+            <li>Assistant qui répond aux demandes clients 24h/24 et qualifie les urgences</li>
+            <li>Relances automatiques des factures impayées</li>
+            <li>Planning de tournées optimisé selon les adresses des interventions</li>
+          </ul>
+          <span class="tag">Artisans & BTP</span>
+        </div>
+
+        <div class="card reveal" data-cat="artisan">
+          <div class="card-head"><span class="icon">⚡</span><h3>Électricien</h3></div>
+          <ul>
+            <li>Rédaction automatique des rapports de conformité et comptes rendus</li>
+            <li>Chiffrage assisté à partir des plans ou photos du tableau</li>
+            <li>Réponses instantanées aux demandes de dépannage avec pré-diagnostic</li>
+            <li>Suivi de stock de matériel avec alertes de réapprovisionnement</li>
+          </ul>
+          <span class="tag">Artisans & BTP</span>
+        </div>
+
+        <div class="card reveal" data-cat="artisan">
+          <div class="card-head"><span class="icon">🌿</span><h3>Paysagiste</h3></div>
+          <ul>
+            <li>Visualisation IA du jardin fini à partir d'une simple photo du terrain</li>
+            <li>Devis saisonniers et contrats d'entretien générés automatiquement</li>
+            <li>Publications avant/après programmées sur les réseaux sociaux</li>
+            <li>Rappels automatiques d'entretien envoyés aux clients au bon moment</li>
+          </ul>
+          <span class="tag">Artisans & BTP</span>
+        </div>
+
+        <div class="card reveal" data-cat="immo">
+          <div class="card-head"><span class="icon">🏠</span><h3>Agent immobilier</h3></div>
+          <ul>
+            <li>Annonces rédigées et optimisées en 30 secondes à partir des caractéristiques du bien</li>
+            <li>Home staging virtuel : meubler une pièce vide par IA</li>
+            <li>Qualification automatique des acheteurs avant la première visite</li>
+            <li>Estimation assistée croisant les données du marché local</li>
+          </ul>
+          <span class="tag">Immobilier & commerce</span>
+        </div>
+
+        <div class="card reveal" data-cat="immo">
+          <div class="card-head"><span class="icon">🛍️</span><h3>Commerçant</h3></div>
+          <ul>
+            <li>Fiches produits et descriptions rédigées en masse pour la boutique en ligne</li>
+            <li>Réponses automatiques aux avis Google, positives comme négatives</li>
+            <li>Prévision des ventes et des stocks selon la saisonnalité</li>
+            <li>Campagnes promo personnalisées selon l'historique d'achat</li>
+          </ul>
+          <span class="tag">Immobilier & commerce</span>
+        </div>
+
+        <div class="card reveal" data-cat="resto">
+          <div class="card-head"><span class="icon">🍽️</span><h3>Restaurateur</h3></div>
+          <ul>
+            <li>Réservations et questions clients gérées automatiquement, même pendant le service</li>
+            <li>Menus traduits et adaptés (allergènes, régimes) en un clic</li>
+            <li>Photos de plats sublimées par IA pour les réseaux et plateformes</li>
+            <li>Analyse des avis clients pour repérer ce qui plaît ou coince</li>
+          </ul>
+          <span class="tag">Restauration & beauté</span>
+        </div>
+
+        <div class="card reveal" data-cat="resto">
+          <div class="card-head"><span class="icon">💇</span><h3>Coiffeur / Esthétique</h3></div>
+          <ul>
+            <li>Prise de RDV automatisée avec rappels anti-lapins par SMS</li>
+            <li>Simulation de coupe ou couleur par IA avant de se lancer</li>
+            <li>Contenus Instagram générés à partir des photos du salon</li>
+            <li>Fidélisation : messages personnalisés aux clientes inactives</li>
+          </ul>
+          <span class="tag">Restauration & beauté</span>
+        </div>
+
+        <div class="card reveal" data-cat="sante">
+          <div class="card-head"><span class="icon">🧘</span><h3>Thérapeute / Praticien bien-être</h3></div>
+          <ul>
+            <li>Agenda et prise de RDV en ligne gérés sans secrétariat</li>
+            <li>Notes de séance structurées et anonymisées par dictée vocale</li>
+            <li>Articles et newsletters de vulgarisation rédigés plus vite</li>
+            <li>Réponses aux questions fréquentes des patients automatisées</li>
+          </ul>
+          <span class="tag">Santé & bien-être</span>
+        </div>
+
+        <div class="card reveal" data-cat="sante">
+          <div class="card-head"><span class="icon">🏋️</span><h3>Coach sportif</h3></div>
+          <ul>
+            <li>Programmes d'entraînement personnalisés générés selon le profil du client</li>
+            <li>Suivi nutritionnel assisté avec analyses de repas par photo</li>
+            <li>Vidéos et contenus motivation déclinés pour chaque réseau</li>
+            <li>Bilan de progression automatique envoyé chaque mois aux clients</li>
+          </ul>
+          <span class="tag">Santé & bien-être</span>
+        </div>
+
+        <div class="card reveal" data-cat="services">
+          <div class="card-head"><span class="icon">⚖️</span><h3>Avocat / Juriste</h3></div>
+          <ul>
+            <li>Synthèse de dossiers et de jurisprudence en quelques minutes</li>
+            <li>Premiers jets de courriers et conclusions relus ensuite par l'humain</li>
+            <li>Veille juridique automatisée sur ses domaines de spécialité</li>
+            <li>Pré-qualification des demandes entrantes avant le premier RDV</li>
+          </ul>
+          <span class="tag">Services pro</span>
+        </div>
+
+        <div class="card reveal" data-cat="services">
+          <div class="card-head"><span class="icon">📊</span><h3>Expert-comptable</h3></div>
+          <ul>
+            <li>Saisie et catégorisation automatique des pièces comptables</li>
+            <li>Détection d'anomalies et de doublons dans les écritures</li>
+            <li>Notes de synthèse client rédigées à partir des chiffres</li>
+            <li>Réponses types aux questions récurrentes des clients</li>
+          </ul>
+          <span class="tag">Services pro</span>
+        </div>
+
+        <div class="card reveal" data-cat="services">
+          <div class="card-head"><span class="icon">🚗</span><h3>Garage automobile</h3></div>
+          <ul>
+            <li>Pré-diagnostic guidé à partir de la description de la panne</li>
+            <li>Devis et ordres de réparation générés automatiquement</li>
+            <li>Rappels d'entretien personnalisés (CT, vidange, pneus) par SMS</li>
+            <li>Réponses aux avis et demandes en ligne automatisées</li>
+          </ul>
+          <span class="tag">Services pro</span>
+        </div>
+      </div>
+
+      <p class="section-sub reveal" style="margin-top: 2.5rem;">Votre métier n'est pas dans la liste ? Il y a forcément des cas d'usage pour vous aussi — <a href="#contact" style="color: var(--cyan);">demandez-moi</a>.</p>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <h2 class="reveal">Prêt à passer <span class="gradient-text">à l'action</span> ?</h2>
+      <p class="section-sub reveal">Ce site vous montre le champ des possibles. Pour le mettre en œuvre dans votre activité — coaching, automatisation, formation — Jérémy GONIN, expert IA freelance, vous accompagne partout en France.</p>
+      <div class="cta-row reveal">
+        <a href="https://www.jeremyai.fr/" class="btn btn-primary">Découvrir l'accompagnement →</a>
+        <a href="mailto:contact@jeremyai.fr" class="btn btn-ghost">contact@jeremyai.fr</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 jeremyai.tech · L'IA par métier · Un site de <a href="https://www.jeremyai.fr/">Jérémy GONIN — Expert IA</a></p>
+  </footer>
+
+  <script>
+    /* ===== Réseau neuronal animé ===== */
+    const canvas = document.getElementById('neural-bg');
+    const ctx = canvas.getContext('2d');
+    let nodes = [], W, H;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function resize() {
+      W = canvas.width = innerWidth;
+      H = canvas.height = innerHeight;
+      const count = Math.min(80, Math.floor(W * H / 18000));
+      nodes = Array.from({ length: count }, () => ({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
+        r: Math.random() * 1.8 + 0.6
+      }));
+    }
+    resize();
+    addEventListener('resize', resize);
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      for (const n of nodes) {
+        n.x += n.vx; n.y += n.vy;
+        if (n.x < 0 || n.x > W) n.vx *= -1;
+        if (n.y < 0 || n.y > H) n.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(34, 211, 238, 0.7)';
+        ctx.fill();
+      }
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+          const d = Math.hypot(dx, dy);
+          if (d < 140) {
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = `rgba(167, 139, 250, ${0.25 * (1 - d / 140)})`;
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          }
+        }
+      }
+      if (!reduceMotion) requestAnimationFrame(draw);
+    }
+    draw();
+
+    /* ===== Parallax au scroll ===== */
+    const layers = document.querySelectorAll('[data-speed]');
+    let ticking = false;
+    addEventListener('scroll', () => {
+      if (ticking || reduceMotion) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = scrollY;
+        layers.forEach(l => {
+          l.style.transform = `translateY(${-y * parseFloat(l.dataset.speed)}px)`;
+        });
+        ticking = false;
+      });
+    }, { passive: true });
+
+    /* ===== Reveal au scroll ===== */
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ===== Filtres métiers ===== */
+    const btns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('#metiers .card');
+    btns.forEach(btn => btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => {
+        const show = f === 'all' || c.dataset.cat === f;
+        c.classList.toggle('hidden', !show);
+        if (show) c.classList.add('visible');
+      });
+    }));
+  </script>
+</body>
+</html>
