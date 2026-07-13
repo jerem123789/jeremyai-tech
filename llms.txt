@@ -28,3 +28,5 @@ Jérémy GONIN — expert et coach en intelligence artificielle, freelance, Fran
 ## Pages
 
 - [Accueil — L'IA par métier](https://www.jeremyai.tech/) : tous les cas d'usage par secteur, FAQ incluse
+- [Blog](https://www.jeremyai.tech/blog/) : guides pratiques métier par métier
+- [IA pour plombier et chauffagiste : 7 usages concrets](https://www.jeremyai.tech/blog/ia-pour-plombier-chauffagiste.html) : devis par photo, urgences 24h/24, relances d'impayés, plan de démarrage en 3 étapes
