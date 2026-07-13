@@ -9,7 +9,10 @@
   <meta name="description" content="Découvrez concrètement ce que l'IA peut faire pour votre métier : plombier, agent immobilier, restaurateur, thérapeute, avocat, commerçant… Des cas d'usage réels, secteur par secteur.">
   <meta name="keywords" content="IA par métier, IA pour plombier, IA pour agent immobilier, IA pour restaurateur, IA pour artisan, IA pour avocat, IA pour commerçant, cas d'usage intelligence artificielle, IA secteur activité">
   <meta name="author" content="Jérémy GONIN">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="geo.region" content="FR">
+  <meta name="geo.placename" content="France">
+  <meta name="language" content="fr">
   <link rel="canonical" href="https://www.jeremyai.tech/">
 
   <!-- Open Graph -->
@@ -26,16 +29,67 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "L'IA par métier",
-    "url": "https://www.jeremyai.tech/",
-    "description": "Cas d'usage concrets de l'intelligence artificielle par secteur d'activité",
-    "author": {
-      "@type": "Person",
-      "name": "Jérémy GONIN",
-      "url": "https://www.jeremyai.fr/",
-      "sameAs": ["https://www.jeremyai.fr/"]
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.jeremyai.tech/#website",
+        "name": "L'IA par métier",
+        "url": "https://www.jeremyai.tech/",
+        "inLanguage": "fr-FR",
+        "description": "Cas d'usage concrets de l'intelligence artificielle par secteur d'activité : artisans, immobilier, commerce, restauration, santé, services professionnels.",
+        "author": { "@id": "https://www.jeremyai.tech/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.jeremyai.tech/#person",
+        "name": "Jérémy GONIN",
+        "jobTitle": "Expert et coach en intelligence artificielle",
+        "url": "https://www.jeremyai.fr/",
+        "email": "contact@jeremyai.fr",
+        "nationality": "FR",
+        "knowsAbout": ["Intelligence artificielle", "Automatisation", "ChatGPT", "Formation IA", "Création de sites web", "TPE/PME"],
+        "sameAs": [
+          "https://www.jeremyai.fr/",
+          "https://x.com/jeremygonin_ia"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.jeremyai.tech/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "L'IA peut-elle vraiment aider une petite entreprise ou un artisan ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les tâches qui pèsent le plus sur les indépendants — devis, relances, réponses aux clients, planning, réseaux sociaux — sont précisément celles que l'IA automatise le mieux. Un plombier, un agent immobilier ou un restaurateur peut gagner 5 à 10 heures par semaine avec des outils simples." }
+          },
+          {
+            "@type": "Question",
+            "name": "Combien coûte l'IA pour démarrer ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "La plupart des outils IA ont une version gratuite ou coûtent entre 0 et 25 € par mois. On peut commencer sans investissement : assistant conversationnel gratuit, automatisation des avis Google, génération de devis ou d'annonces." }
+          },
+          {
+            "@type": "Question",
+            "name": "Faut-il des compétences techniques pour utiliser l'IA dans son métier ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Non. Les outils IA actuels s'utilisent en langage naturel, comme une conversation. Savoir décrire son besoin suffit. Un accompagnement de quelques heures permet d'aller beaucoup plus vite et d'éviter les pièges." }
+          },
+          {
+            "@type": "Question",
+            "name": "Quel est le premier cas d'usage IA à mettre en place ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Celui qui touche la tâche la plus répétitive de votre semaine. Pour la plupart des métiers : la rédaction (devis, mails, annonces, posts) et les réponses aux demandes clients. Ce sont les gains les plus rapides et les plus visibles." }
+          },
+          {
+            "@type": "Question",
+            "name": "L'IA va-t-elle remplacer mon métier ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Non — elle remplace des tâches, pas des métiers. Le savoir-faire terrain, la relation client et la responsabilité restent humains. En revanche, les professionnels qui utilisent l'IA prennent un avantage réel sur ceux qui s'en passent." }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment me faire accompagner pour mettre l'IA en place dans mon activité ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Jérémy GONIN, expert IA freelance, accompagne les indépendants et TPE/PME partout en France (présentiel ou visioconférence) : coaching, automatisation, formation et création de sites web. Informations et tarifs sur jeremyai.fr." }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -188,6 +242,26 @@
       font-size: 0.72rem; border-radius: 999px; border: 1px solid var(--border); color: var(--violet);
     }
 
+    /* ===== FAQ ===== */
+    .faq-list { width: 100%; max-width: 760px; }
+    .faq-list details {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      margin-bottom: 0.8rem; backdrop-filter: blur(8px); overflow: hidden;
+    }
+    .faq-list summary {
+      cursor: pointer; padding: 1.1rem 1.4rem; font-weight: 600; font-size: 0.98rem;
+      list-style: none; position: relative; padding-right: 3rem; transition: color 0.2s;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '+'; position: absolute; right: 1.4rem; top: 50%; transform: translateY(-50%);
+      color: var(--cyan); font-size: 1.3rem; transition: transform 0.2s;
+    }
+    .faq-list details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+    .faq-list summary:hover { color: var(--cyan); }
+    .faq-list details p { color: var(--muted); font-size: 0.92rem; padding: 0 1.4rem 1.2rem; }
+    .faq-list details a { color: var(--cyan); }
+
     /* ===== Footer ===== */
     footer {
       position: relative; z-index: 2; text-align: center; padding: 3rem 1.5rem;
@@ -220,7 +294,7 @@
     <ul>
       <li><a href="#pourquoi">Pourquoi l'IA</a></li>
       <li><a href="#secteurs">Votre métier</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Passer à l'action</a></li>
     </ul>
   </nav>
@@ -292,10 +366,9 @@
             <li>Devis générés en 2 minutes depuis une photo ou une description du chantier</li>
             <li>Assistant qui répond aux demandes clients 24h/24 et qualifie les urgences</li>
             <li>Relances automatiques des factures impayées</li>
-            <li>Planning de tournées optimisé selon les adresses des interventions</li><li><a href="/blog/ia-pour-plombier-chauffagiste.html" style="color: var(--cyan); text-decoration: none;">📖 Lire l'article complet →</a></li><li><a href="/blog/ia-pour-plombier-chauffagiste.html" style="color: var(--cyan); text-decoration: none;">📖 Lire l'article complet →</a></li>
+            <li>Planning de tournées optimisé selon les adresses des interventions</li>
           </ul>
           <span class="tag">Artisans & BTP</span>
-          <a href="/blog/ia-pour-plombier-chauffagiste.html" class="tag" style="color: var(--cyan); border-color: rgba(34,211,238,0.4); text-decoration: none; margin-left: 0.4rem;">📖 Lire l'article →</a>
         </div>
 
         <div class="card reveal" data-cat="artisan">
@@ -421,6 +494,38 @@
       </div>
 
       <p class="section-sub reveal" style="margin-top: 2.5rem;">Votre métier n'est pas dans la liste ? Il y a forcément des cas d'usage pour vous aussi — <a href="#contact" style="color: var(--cyan);">demandez-moi</a>.</p>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq">
+      <h2 class="reveal">Questions <span class="gradient-text">fréquentes</span></h2>
+      <p class="section-sub reveal">Les réponses aux questions que se posent les indépendants et TPE avant de se lancer.</p>
+      <div class="faq-list reveal">
+        <details>
+          <summary>L'IA peut-elle vraiment aider une petite entreprise ou un artisan ?</summary>
+          <p>Oui. Les tâches qui pèsent le plus sur les indépendants — devis, relances, réponses aux clients, planning, réseaux sociaux — sont précisément celles que l'IA automatise le mieux. Un plombier, un agent immobilier ou un restaurateur peut gagner 5 à 10 heures par semaine avec des outils simples.</p>
+        </details>
+        <details>
+          <summary>Combien coûte l'IA pour démarrer ?</summary>
+          <p>La plupart des outils IA ont une version gratuite ou coûtent entre 0 et 25 € par mois. On peut commencer sans investissement : assistant conversationnel gratuit, automatisation des avis Google, génération de devis ou d'annonces.</p>
+        </details>
+        <details>
+          <summary>Faut-il des compétences techniques pour utiliser l'IA dans son métier ?</summary>
+          <p>Non. Les outils IA actuels s'utilisent en langage naturel, comme une conversation. Savoir décrire son besoin suffit. Un accompagnement de quelques heures permet d'aller beaucoup plus vite et d'éviter les pièges.</p>
+        </details>
+        <details>
+          <summary>Quel est le premier cas d'usage IA à mettre en place ?</summary>
+          <p>Celui qui touche la tâche la plus répétitive de votre semaine. Pour la plupart des métiers : la rédaction (devis, mails, annonces, posts) et les réponses aux demandes clients. Ce sont les gains les plus rapides et les plus visibles.</p>
+        </details>
+        <details>
+          <summary>L'IA va-t-elle remplacer mon métier ?</summary>
+          <p>Non — elle remplace des tâches, pas des métiers. Le savoir-faire terrain, la relation client et la responsabilité restent humains. En revanche, les professionnels qui utilisent l'IA prennent un avantage réel sur ceux qui s'en passent.</p>
+        </details>
+        <details>
+          <summary>Comment me faire accompagner pour mettre l'IA en place dans mon activité ?</summary>
+          <p><a href="https://www.jeremyai.fr/">Jérémy GONIN, expert IA freelance</a>, accompagne les indépendants et TPE/PME partout en France (présentiel ou visioconférence) : coaching, automatisation, formation et création de sites web.</p>
+        </details>
+      </div>
     </section>
 
     <!-- ===== CONTACT ===== -->

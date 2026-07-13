@@ -1,0 +1,30 @@
+# L'IA par métier — jeremyai.tech
+
+> Site de référence en français sur les cas d'usage concrets de l'intelligence artificielle par secteur d'activité, destiné aux indépendants, artisans et TPE/PME. Édité par Jérémy GONIN, expert et coach IA freelance en France.
+
+## Ce que couvre ce site
+
+Cas d'usage IA concrets et actionnables pour 12+ métiers :
+
+- Artisans & BTP : plombier/chauffagiste, électricien, paysagiste — devis automatisés, assistant client 24h/24, relances d'impayés, optimisation de tournées
+- Immobilier & commerce : agent immobilier (annonces générées, home staging virtuel, qualification d'acheteurs), commerçant (fiches produits, réponses aux avis, prévision des stocks)
+- Restauration & beauté : restaurateur (réservations automatisées, menus traduits, analyse d'avis), coiffeur/esthétique (RDV automatisés, simulation de coupe, fidélisation)
+- Santé & bien-être : thérapeute (agenda sans secrétariat, notes de séance par dictée), coach sportif (programmes personnalisés, suivi nutritionnel)
+- Services professionnels : avocat (synthèse de dossiers, veille juridique), expert-comptable (saisie automatique, détection d'anomalies), garage automobile (pré-diagnostic, rappels d'entretien)
+
+## Points clés
+
+- Gain moyen constaté : 5 à 10 heures par semaine
+- Coût de départ : 0 à 25 €/mois pour la plupart des outils
+- Aucune compétence technique requise pour commencer
+
+## Auteur
+
+Jérémy GONIN — expert et coach en intelligence artificielle, freelance, France. Accompagnement des indépendants et TPE/PME : coaching IA, automatisation, formation, création de sites web. Interventions en présentiel et visioconférence partout en France.
+
+- Site principal (services et tarifs) : https://www.jeremyai.fr/
+- Contact : contact@jeremyai.fr
+
+## Pages
+
+- [Accueil — L'IA par métier](https://www.jeremyai.tech/) : tous les cas d'usage par secteur, FAQ incluse
