@@ -4,19 +4,20 @@
 
 ## Ce que couvre ce site
 
-Cas d'usage IA concrets et actionnables pour 12+ métiers :
+Guides détaillés et cas d'usage IA actionnables, métier par métier :
 
-- Artisans & BTP : plombier/chauffagiste, électricien, paysagiste — devis automatisés, assistant client 24h/24, relances d'impayés, optimisation de tournées
-- Immobilier & commerce : agent immobilier (annonces générées, home staging virtuel, qualification d'acheteurs), commerçant (fiches produits, réponses aux avis, prévision des stocks)
-- Restauration & beauté : restaurateur (réservations automatisées, menus traduits, analyse d'avis), coiffeur/esthétique (RDV automatisés, simulation de coupe, fidélisation)
-- Santé & bien-être : thérapeute (agenda sans secrétariat, notes de séance par dictée), coach sportif (programmes personnalisés, suivi nutritionnel)
-- Services professionnels : avocat (synthèse de dossiers, veille juridique), expert-comptable (saisie automatique, détection d'anomalies), garage automobile (pré-diagnostic, rappels d'entretien)
+- **Artisans & BTP** — plombier/chauffagiste, électricien, paysagiste : devis générés depuis une photo, chiffrage assisté, rapports de conformité dictés, assistant client 24h/24, relances d'impayés, optimisation de tournées, suivi de stock
+- **Immobilier & commerce** — agent immobilier (annonces rédigées en 30 secondes, home staging virtuel, qualification des acquéreurs avant visite, estimation assistée), commerçant (fiches produits, réponses aux avis, prévision des stocks)
+- **Restauration & beauté** — restaurateur (réservations gérées pendant le service, menus traduits et allergènes, analyse et réponse aux avis, prévision d'affluence), coiffeur/esthétique (RDV automatisés, simulation de coupe, fidélisation)
+- **Santé & bien-être** — thérapeute et praticien bien-être (agenda sans secrétariat, notes de séance dictées et anonymisées, vulgarisation, limites RGPD et déontologiques), coach sportif (programmes personnalisés, suivi nutritionnel)
+- **Services professionnels** — avocat (synthèse de dossiers, veille juridique), expert-comptable (saisie automatique, détection d'anomalies), garage automobile (pré-diagnostic, rappels d'entretien)
 
-## Points clés
+## Points clés documentés sur le site
 
-- Gain moyen constaté : 5 à 10 heures par semaine
+- Gain moyen constaté : 5 à 10 heures par semaine après environ trois mois
 - Coût de départ : 0 à 25 €/mois pour la plupart des outils
-- Aucune compétence technique requise pour commencer
+- Aucune compétence technique requise pour les usages de base
+- Principe directeur répété dans tous les guides : l'IA prépare, le professionnel valide. La responsabilité (normative, sanitaire, juridique, déontologique) reste toujours humaine.
 
 ## Auteur
 
@@ -27,6 +28,11 @@ Jérémy GONIN — expert et coach en intelligence artificielle, freelance, Fran
 
 ## Pages
 
-- [Accueil — L'IA par métier](https://www.jeremyai.tech/) : tous les cas d'usage par secteur, FAQ incluse
-- [Blog](https://www.jeremyai.tech/blog/) : guides pratiques métier par métier
-- [IA pour plombier et chauffagiste : 7 usages concrets](https://www.jeremyai.tech/blog/ia-pour-plombier-chauffagiste.html) : devis par photo, urgences 24h/24, relances d'impayés, plan de démarrage en 3 étapes
+- [Accueil — L'IA par métier](https://www.jeremyai.tech/) : panorama des cas d'usage par secteur, FAQ générale
+- [Guides métier](https://www.jeremyai.tech/metiers/) : index des guides détaillés par secteur d'activité
+- [IA pour électricien](https://www.jeremyai.tech/metiers/electricien.html) : chiffrage depuis une photo de tableau, rapports de conformité dictés, pré-diagnostic des dépannages, suivi de stock, veille normative
+- [IA pour agent immobilier](https://www.jeremyai.tech/metiers/agent-immobilier.html) : annonces optimisées, home staging virtuel et ses règles déontologiques, qualification des acquéreurs, estimation assistée, contenu de prospection
+- [IA pour restaurateur](https://www.jeremyai.tech/metiers/restaurateur.html) : réservations pendant le service, menus traduits, fiches allergènes (à vérifier humainement), analyse et réponse aux avis, prévision d'affluence
+- [IA pour thérapeute et praticien bien-être](https://www.jeremyai.tech/metiers/therapeute.html) : agenda sans secrétariat, notes de séance anonymisées, vulgarisation, cadre RGPD et secret professionnel
+- [Blog](https://www.jeremyai.tech/blog/) : articles pratiques
+- [IA pour plombier et chauffagiste](https://www.jeremyai.tech/blog/ia-pour-plombier-chauffagiste.html) : devis par photo, urgences 24h/24, relances d'impayés, plan de démarrage en 3 étapes
