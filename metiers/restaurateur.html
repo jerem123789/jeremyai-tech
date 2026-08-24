@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA pour restaurateur : 7 usages concrets pour remplir la salle sans y passer ses nuits | jeremyai.tech</title>
+<meta name="description" content="Réservations automatisées pendant le service, menus traduits et allergènes, réponses aux avis Google, prévision des commandes : 7 usages concrets de l&#x27;intelligence artificielle pour les restaurateurs.">
+<meta name="keywords" content="IA pour restaurateur, intelligence artificielle restaurant, réservation automatique restaurant, avis Google restaurant IA, menu traduit IA, gestion restaurant intelligence artificielle, marketing restaurant IA">
+<meta name="author" content="Jérémy GONIN">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="geo.region" content="FR">
+<meta name="language" content="fr">
+<link rel="canonical" href="https://www.jeremyai.tech/metiers/restaurateur.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="L'IA par métier — jeremyai.tech">
+<meta property="og:title" content="IA pour restaurateur : 7 usages concrets">
+<meta property="og:description" content="Réservations automatisées pendant le service, menus traduits et allergènes, réponses aux avis Google, prévision des commandes : 7 usages concrets de l&#x27;intelligence artificielle pour les restaurateurs.">
+<meta property="og:url" content="https://www.jeremyai.tech/metiers/restaurateur.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@jeremygonin_ia">
+<meta name="theme-color" content="#05060f">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "IA pour restaurateur : 7 usages concrets pour remplir la salle sans y passer ses nuits", "description": "Réservations automatisées pendant le service, menus traduits et allergènes, réponses aux avis Google, prévision des commandes : 7 usages concrets de l'intelligence artificielle pour les restaurateurs.", "author": {"@type": "Person", "name": "Jérémy GONIN", "url": "https://www.jeremyai.fr/"}, "publisher": {"@type": "Organization", "name": "jeremyai.tech", "url": "https://www.jeremyai.tech/"}, "datePublished": "2026-07-13", "dateModified": "2026-07-13", "inLanguage": "fr-FR", "about": "Intelligence artificielle appliquée au métier de restaurateur", "mainEntityOfPage": "https://www.jeremyai.tech/metiers/restaurateur.html"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Est-ce que je peux laisser une IA répondre seule à mes clients ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour les questions factuelles — horaires, accès, disponibilités, carte — oui, sous réserve d'avoir bien paramétré les informations. Pour une réclamation, un incident ou une demande sensible, la réponse doit rester humaine : c'est précisément le moment où le client attend une vraie personne en face."}}, {"@type": "Question", "name": "Les fiches allergènes générées par IA sont-elles fiables ?", "acceptedAnswer": {"@type": "Answer", "text": "Elles constituent un point de départ, jamais un document final. La réglementation sur l'information des allergènes engage votre responsabilité pénale en cas d'erreur. Utilisez l'IA pour structurer et mettre en forme, mais validez chaque ligne à partir de vos recettes et de vos fiches fournisseurs."}}, {"@type": "Question", "name": "Retoucher mes photos de plats avec l'IA, est-ce risqué ?", "acceptedAnswer": {"@type": "Answer", "text": "Améliorer la lumière, les couleurs ou le cadrage ne pose aucun problème : c'est de la retouche photo classique, accélérée. Ce qui devient problématique, c'est de générer une image qui ne correspond pas au plat servi — ingrédients ajoutés, portions gonflées. Outre la déception client, cela peut relever de la publicité trompeuse."}}, {"@type": "Question", "name": "Je n'ai personne pour s'occuper de l'informatique. C'est jouable ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, à condition de commencer petit. Les usages avis, menus et contenus se pilotent depuis un téléphone, en langage courant, sans installation. Beaucoup de restaurateurs démarrent seuls sur ces trois-là. Les briques plus techniques — assistant de réservation, connexion à la caisse — méritent en revanche un accompagnement ponctuel."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.jeremyai.tech/"}, {"@type": "ListItem", "position": 2, "name": "Métiers", "item": "https://www.jeremyai.tech/metiers/"}, {"@type": "ListItem", "position": 3, "name": "Restaurateur", "item": "https://www.jeremyai.tech/metiers/restaurateur.html"}]}]}</script>
+<style>
+:root{--bg:#05060f;--cyan:#22d3ee;--violet:#a78bfa;--magenta:#e879f9;--text:#e2e8f0;--muted:#94a3b8;--card:rgba(15,20,40,.6);--border:rgba(34,211,238,.15)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.75;overflow-x:hidden}
+#neural-bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.parallax-layer{position:fixed;inset:0;z-index:1;pointer-events:none;will-change:transform}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.3}
+.orb-1{width:45vw;height:45vw;background:radial-gradient(circle,var(--violet),transparent 70%);top:-12%;left:-12%}
+.orb-2{width:38vw;height:38vw;background:radial-gradient(circle,var(--cyan),transparent 70%);top:70%;right:-12%}
+.orb-3{width:32vw;height:32vw;background:radial-gradient(circle,var(--magenta),transparent 70%);top:170%;left:5%}
+.grid-layer{position:fixed;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(34,211,238,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.05) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,black 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,black 30%,transparent 75%);will-change:transform}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(5,6,15,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{font-weight:700;font-size:1.05rem;letter-spacing:.05em;text-decoration:none;background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav ul{display:flex;gap:1.5rem;list-style:none}
+nav a{color:var(--muted);text-decoration:none;font-size:.9rem;transition:color .2s}
+nav a:hover{color:var(--cyan)}
+@media(max-width:760px){nav ul{display:none}}
+main{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:7.5rem 1.5rem 4rem}
+.crumb{font-size:.82rem;color:var(--muted);margin-bottom:1.6rem}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--cyan)}
+.badge{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem 1rem;border:1px solid var(--border);border-radius:999px;font-size:.78rem;color:var(--cyan);background:var(--card);margin-bottom:1.4rem}
+h1{font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.18;font-weight:800;margin-bottom:1.1rem;letter-spacing:-.01em}
+.gradient-text{background:linear-gradient(90deg,var(--cyan) 0%,var(--violet) 50%,var(--magenta) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--muted);font-size:1.08rem;margin-bottom:1rem}
+.byline{color:var(--muted);font-size:.82rem;padding-bottom:2rem;margin-bottom:2.4rem;border-bottom:1px solid var(--border)}
+h2{font-size:clamp(1.28rem,2.9vw,1.65rem);margin:2.8rem 0 .9rem;line-height:1.3;font-weight:700}
+h3{font-size:1.03rem;margin:1.8rem 0 .5rem;color:var(--text);font-weight:600}
+p{margin-bottom:1.1rem;color:#cbd5e1}
+p strong{color:var(--text)}
+a{color:var(--cyan)}
+.usage{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--violet);border-radius:12px;padding:1.4rem 1.6rem;margin:1.4rem 0;backdrop-filter:blur(8px)}
+.usage h2{margin:0 0 .7rem;font-size:1.16rem}
+.usage p:last-child{margin-bottom:0}
+.steps{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.6rem;backdrop-filter:blur(8px);margin:1.4rem 0}
+.steps p:last-child{margin-bottom:0}
+.faq details{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:.8rem;backdrop-filter:blur(8px);overflow:hidden}
+.faq summary{cursor:pointer;padding:1.05rem 3rem 1.05rem 1.4rem;font-weight:600;font-size:.97rem;list-style:none;position:relative;transition:color .2s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:1.4rem;top:50%;transform:translateY(-50%);color:var(--cyan);font-size:1.3rem;transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq summary:hover{color:var(--cyan)}
+.faq details p{padding:0 1.4rem 1.2rem;margin:0;font-size:.93rem;color:var(--muted)}
+.cta{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;backdrop-filter:blur(8px);margin-top:3rem}
+.cta h2{margin-top:0}
+.cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem}
+.btn{padding:.8rem 1.7rem;border-radius:10px;text-decoration:none;font-weight:600;font-size:.93rem;transition:transform .2s,box-shadow .2s;display:inline-block}
+.btn-primary{background:linear-gradient(90deg,var(--cyan),var(--violet));color:#05060f;box-shadow:0 0 25px rgba(34,211,238,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(34,211,238,.45)}
+.btn-ghost{border:1px solid var(--border);color:var(--text);background:rgba(15,20,40,.5)}
+.btn-ghost:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.related{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+.related h2{margin-top:0;font-size:1.15rem}
+.related ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.7rem}
+.related a{display:block;padding:.85rem 1.1rem;background:var(--card);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:.9rem;transition:border-color .2s,transform .2s}
+.related a:hover{border-color:var(--cyan);transform:translateY(-2px)}
+footer{position:relative;z-index:2;text-align:center;padding:2.5rem 1.5rem;color:var(--muted);font-size:.84rem;border-top:1px solid var(--border);background:rgba(5,6,15,.8)}
+footer a{color:var(--cyan);text-decoration:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="neural-bg" aria-hidden="true"></canvas>
+<div class="grid-layer" data-speed="0.15" aria-hidden="true"></div>
+<div class="parallax-layer" data-speed="0.3" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-3"></div></div>
+<div class="parallax-layer" data-speed="0.5" aria-hidden="true"><div class="orb orb-2"></div></div>
+<nav>
+  <a class="logo" href="/">JEREMYAI.TECH</a>
+  <ul>
+    <li><a href="/#pourquoi">Pourquoi l'IA</a></li>
+    <li><a href="/metiers/">Métiers</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#contact">Passer à l'action</a></li>
+  </ul>
+</nav>
+<main>
+<article>
+<p class="crumb"><a href="/">Accueil</a> &rsaquo; <a href="/metiers/">M&eacute;tiers</a> &rsaquo; Restaurateur</p>
+<div class="badge">🍽️ Restauration &amp; beauté &middot; Lecture 6 min</div>
+<h1>IA pour <span class="gradient-text">restaurateur</span> : 7 usages concrets pour remplir la salle sans y passer ses nuits</h1>
+<p class="lede">Réservations gérées pendant le service, menus traduits en un clic, avis clients analysés et répondus, photos de plats sublimées : l'IA s'occupe de tout ce qui vous éloigne de votre cuisine.</p>
+<p class="byline">Par J&eacute;r&eacute;my GONIN, expert IA freelance &middot; Mis &agrave; jour le 13 juillet 2026</p>
+
+<h2>Le restaurateur travaille déjà deux métiers — l&#x27;IA en reprend un troisième</h2>
+<p>Un restaurant indépendant, c'est une cuisine, une salle, et par-dessus : un standard téléphonique, un service client en ligne, un community manager, un gestionnaire de stocks et un comptable. Ces rôles-là, personne ne les a recrutés — ils se sont ajoutés au patron, souvent après 23 h.</p><p>L'intelligence artificielle est particulièrement adaptée à ce métier pour une raison simple : la majorité de ces tâches annexes sont répétitives, prévisibles, et se déroulent par écrit. C'est le terrain de jeu idéal.</p><p>Voici sept usages qui fonctionnent aujourd'hui, sans investissement lourd et sans transformer votre établissement en laboratoire technologique.</p>
+
+<h2>7 usages concrets de l'IA pour un restaurateur</h2>
+<div class="usage"><h2>1. Les réservations et les questions clients gérées pendant le service</h2><p>Le téléphone sonne au moment du coup de feu. Personne ne peut répondre, le client réserve ailleurs. Un assistant IA prend le relais sur vos canaux écrits — site, réseaux sociaux, messagerie — et traite les demandes courantes : disponibilités, nombre de couverts, horaires, accès, parking, terrasse, animaux acceptés.</p><p>Les cas particuliers vous remontent, le reste se règle seul. Sur un service, cela représente couramment une dizaine de sollicitations absorbées sans lever les yeux d'une assiette.</p></div>
+<div class="usage"><h2>2. Des menus traduits, adaptés et à jour en un clic</h2><p>Traduire une carte en anglais, en allemand ou en espagnol demandait une journée et un budget. L'IA le fait en quelques minutes, avec une vraie qualité sur les intitulés courants — à relire tout de même pour les spécialités régionales et les jeux de mots, qui restent son point faible.</p><p>Même logique pour les déclinaisons : version sans gluten, mise en avant des plats végétariens, ou fiche allergènes générée à partir de vos recettes. Attention cependant : la fiche allergènes engage votre responsabilité légale, elle doit impérativement être vérifiée par vous, ligne par ligne.</p></div>
+<div class="usage"><h2>3. Des photos de plats retravaillées pour les réseaux et les plateformes</h2><p>Une photo prise au téléphone sous les néons de la cuisine ne rend pas justice à votre travail. Les outils d'amélioration par IA corrigent la lumière, la balance des couleurs et le cadrage en quelques secondes.</p><p>La limite à ne pas franchir : améliorer le rendu, oui ; générer un plat qui n'existe pas ou ajouter des ingrédients absents de l'assiette, non. Le client qui reçoit autre chose que ce qu'il a vu laisse un avis à une étoile — et il a raison.</p></div>
+<div class="usage"><h2>4. Une analyse des avis clients qui dit ce qui coince vraiment</h2><p>Lire deux cents avis pour en tirer une conclusion, personne ne le fait. L'IA, si. Elle regroupe les retours par thème — attente, bruit, rapport qualité-prix, tel plat précis, accueil — et fait ressortir les tendances, y compris celles que vous ne soupçonniez pas.</p><p>C'est souvent l'usage le plus révélateur : beaucoup de restaurateurs découvrent que leur point faible n'est pas la cuisine mais le temps d'attente entre l'entrée et le plat, ou l'acoustique de la salle le samedi soir.</p></div>
+<div class="usage"><h2>5. Des réponses aux avis, personnalisées et publiées vite</h2><p>Répondre à tous les avis améliore votre visibilité locale et rassure les futurs clients. Mais répondre à un avis négatif demande du recul — et on n'en a pas toujours à minuit après un service difficile.</p><p>L'IA propose une réponse posée, personnalisée et professionnelle en quelques secondes. Vous relisez, vous ajustez le ton, vous publiez. Le bénéfice est double : la réponse part vite, et elle part sans l'émotion du moment.</p></div>
+<div class="usage"><h2>6. Une prévision d&#x27;affluence pour ajuster commandes et planning</h2><p>En croisant votre historique de couverts, le calendrier — jours fériés, vacances scolaires, événements locaux — et la météo, l'IA estime l'affluence des jours à venir. Vous ajustez vos commandes de frais et votre planning en conséquence.</p><p>Sur un poste où le gaspillage et les heures en trop pèsent directement sur la marge, quelques pourcents d'ajustement représentent vite plusieurs centaines d'euros par mois.</p></div>
+<div class="usage"><h2>7. Une communication régulière sans y penser tous les jours</h2><p>Le plat du jour, la suggestion du chef, l'arrivée d'un produit de saison, l'annonce d'une soirée : ce contenu doit sortir régulièrement pour que l'algorithme des réseaux vous montre. Or il sort quand on y pense, c'est-à-dire rarement.</p><p>À partir de votre carte et de quelques photos, l'IA rédige et programme les publications de la semaine en une seule session de vingt minutes. La régularité fait le reste.</p></div>
+
+<h2>Combien &ccedil;a co&ucirc;te, et par o&ugrave; commencer&nbsp;?</h2>
+<p>Un assistant généraliste (menus, avis, communication, analyses) coûte entre zéro et vingt euros par mois. Un outil de réservation avec assistant conversationnel se situe généralement entre vingt et soixante euros mensuels — à comparer au coût d'un seul service pendant lequel le téléphone n'a pas été décroché.</p><p>Le point de départ le plus rentable est presque toujours le même : les avis clients. C'est gratuit, immédiat, et l'effet sur la visibilité locale se mesure en quelques semaines.</p>
+
+<h2>Un plan de d&eacute;marrage en 3 &eacute;tapes</h2>
+<div class="steps">
+<p><strong>Semaine 1 — les avis.</strong> Copiez vos cinquante derniers avis dans un assistant IA et demandez-lui les trois thèmes qui reviennent le plus, en positif comme en négatif. Puis générez les réponses aux avis non traités. Une heure de travail pour un résultat visible immédiatement sur votre fiche.</p><p><strong>Semaine 2 — la carte et les contenus.</strong> Faites produire la traduction de votre carte et la trame de vos publications de la semaine. Relisez tout, en particulier les allergènes et les spécialités : c'est votre responsabilité, pas celle de l'outil.</p><p><strong>Semaine 3 et suivantes — l'accueil des demandes.</strong> Mettez en place les réponses automatiques aux questions récurrentes sur vos canaux écrits, puis, si le volume le justifie, un vrai assistant de réservation.</p><p>Une règle simple pour ce métier : tout ce qui touche à la sécurité alimentaire, aux allergènes et aux mentions légales passe obligatoirement par une vérification humaine. L'IA rédige, vous engagez votre établissement.</p>
+</div>
+
+<h2>Questions fr&eacute;quentes</h2>
+<div class="faq">
+<details><summary>Est-ce que je peux laisser une IA répondre seule à mes clients ?</summary><p>Pour les questions factuelles — horaires, accès, disponibilités, carte — oui, sous réserve d'avoir bien paramétré les informations. Pour une réclamation, un incident ou une demande sensible, la réponse doit rester humaine : c'est précisément le moment où le client attend une vraie personne en face.</p></details>
+<details><summary>Les fiches allergènes générées par IA sont-elles fiables ?</summary><p>Elles constituent un point de départ, jamais un document final. La réglementation sur l'information des allergènes engage votre responsabilité pénale en cas d'erreur. Utilisez l'IA pour structurer et mettre en forme, mais validez chaque ligne à partir de vos recettes et de vos fiches fournisseurs.</p></details>
+<details><summary>Retoucher mes photos de plats avec l&#x27;IA, est-ce risqué ?</summary><p>Améliorer la lumière, les couleurs ou le cadrage ne pose aucun problème : c'est de la retouche photo classique, accélérée. Ce qui devient problématique, c'est de générer une image qui ne correspond pas au plat servi — ingrédients ajoutés, portions gonflées. Outre la déception client, cela peut relever de la publicité trompeuse.</p></details>
+<details><summary>Je n&#x27;ai personne pour s&#x27;occuper de l&#x27;informatique. C&#x27;est jouable ?</summary><p>Oui, à condition de commencer petit. Les usages avis, menus et contenus se pilotent depuis un téléphone, en langage courant, sans installation. Beaucoup de restaurateurs démarrent seuls sur ces trois-là. Les briques plus techniques — assistant de réservation, connexion à la caisse — méritent en revanche un accompagnement ponctuel.</p></details>
+</div>
+
+<h2>Votre valeur est en cuisine et en salle, pas dans votre boîte de réception</h2>
+<p>Aucun client n'est jamais revenu dans un restaurant parce que la réponse à son avis était bien tournée. Mais beaucoup ne sont jamais venus parce que personne n'avait décroché, parce que la carte n'était pas traduite, ou parce que le dernier post datait de huit mois.</p><p>L'IA ne cuisine pas et n'accueille pas. Elle enlève simplement les cailloux qui se mettent entre vous et vos clients.</p>
+
+<div class="cta">
+<h2>Envie de mettre &ccedil;a en place chez vous&nbsp;?</h2>
+<p>Coaching, automatisation, formation&nbsp;: J&eacute;r&eacute;my GONIN accompagne les ind&eacute;pendants et TPE partout en France, en pr&eacute;sentiel ou en visioconf&eacute;rence.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="https://www.jeremyai.fr/">D&eacute;couvrir l'accompagnement &rarr;</a>
+<a class="btn btn-ghost" href="mailto:contact@jeremyai.fr">contact@jeremyai.fr</a>
+</div>
+</div>
+
+<div class="related">
+<h2>Autres m&eacute;tiers</h2>
+<ul>
+<li><a href="/metiers/electricien.html">⚡ L'IA pour l'électricien</a></li>
+<li><a href="/metiers/agent-immobilier.html">🏠 L'IA pour l'agent immobilier</a></li>
+<li><a href="/metiers/therapeute.html">🧘 L'IA pour le thérapeute</a></li>
+</ul>
+</div>
+</article>
+</main>
+<footer><p>&copy; 2026 jeremyai.tech &middot; L'IA par m&eacute;tier &middot; Un site de <a href="https://www.jeremyai.fr/">J&eacute;r&eacute;my GONIN &mdash; Expert IA</a></p></footer>
+<script>
+const c=document.getElementById('neural-bg'),x=c.getContext('2d');let n=[],W,H;
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight;const k=Math.min(70,Math.floor(W*H/20000));
+n=Array.from({length:k},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.7+.6}));}
+rs();addEventListener('resize',rs);
+function d(){x.clearRect(0,0,W,H);
+for(const p of n){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+x.beginPath();x.arc(p.x,p.y,p.r,0,6.2832);x.fillStyle='rgba(34,211,238,.65)';x.fill();}
+for(let i=0;i<n.length;i++)for(let j=i+1;j<n.length;j++){const dx=n[i].x-n[j].x,dy=n[i].y-n[j].y,l=Math.hypot(dx,dy);
+if(l<140){x.beginPath();x.moveTo(n[i].x,n[i].y);x.lineTo(n[j].x,n[j].y);x.strokeStyle='rgba(167,139,250,'+(.22*(1-l/140))+')';x.lineWidth=.6;x.stroke();}}
+if(!rm)requestAnimationFrame(d);}
+d();
+const L=document.querySelectorAll('[data-speed]');let t=false;
+addEventListener('scroll',()=>{if(t||rm)return;t=true;requestAnimationFrame(()=>{const y=scrollY;
+L.forEach(l=>l.style.transform='translateY('+(-y*parseFloat(l.dataset.speed))+'px)');t=false;});},{passive:true});
+</script>
+</body>
+</html>
