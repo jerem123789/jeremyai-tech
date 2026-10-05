@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thérapeute et IA : gagner du temps sans risquer le secret</title>
+  <meta name="description" content="Naturopathes, sophrologues : ce que vous pouvez confier à l'IA, ce qu'il ne faut jamais y saisir, et 5 règles RGPD pour l'utiliser sereinement.">
+  <meta name="keywords" content="IA thérapeute, IA naturopathe, IA sophrologue, RGPD données de santé IA, confidentialité ChatGPT thérapeute, intelligence artificielle bien-être">
+  <meta name="author" content="Jérémy GONIN">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.jeremyai.tech/blog/therapeute-ia-confidentialite-rgpd.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="jeremyai.tech">
+  <meta property="og:title" content="Thérapeute, naturopathe, sophrologue : utiliser l'IA sans mettre en danger la confidentialité de vos clients">
+  <meta property="og:description" content="Naturopathes, sophrologues : ce que vous pouvez confier à l'IA, ce qu'il ne faut jamais y saisir, et 5 règles RGPD pour l'utiliser sereinement.">
+  <meta property="og:url" content="https://www.jeremyai.tech/blog/therapeute-ia-confidentialite-rgpd.html">
+  <meta property="article:published_time" content="2026-10-06">
+  <meta property="article:author" content="Jérémy GONIN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Thérapeute, naturopathe, sophrologue : utiliser l'IA sans mettre en danger la confidentialité de vos clients">
+  <meta name="twitter:description" content="Naturopathes, sophrologues : ce que vous pouvez confier à l'IA, ce qu'il ne faut jamais y saisir, et 5 règles RGPD pour l'utiliser sereinement.">
+  <meta name="theme-color" content="#05060f">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Thérapeute, naturopathe, sophrologue : utiliser l'IA sans mettre en danger la confidentialité de vos clients",
+      "description": "Naturopathes, sophrologues : ce que vous pouvez confier à l'IA, ce qu'il ne faut jamais y saisir, et 5 règles RGPD pour l'utiliser sereinement.",
+      "author": {
+        "@type": "Person",
+        "name": "Jérémy GONIN",
+        "url": "https://www.jeremyai.fr/",
+        "jobTitle": "Consultant IA",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "La Tour-du-Pin",
+          "addressRegion": "Isère",
+          "addressCountry": "FR"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "jeremyai.tech",
+        "url": "https://www.jeremyai.tech/"
+      },
+      "datePublished": "2026-10-06",
+      "dateModified": "2026-10-06",
+      "inLanguage": "fr-FR",
+      "articleSection": "Santé & bien-être",
+      "keywords": "IA thérapeute, IA naturopathe, IA sophrologue, RGPD données de santé IA, confidentialité ChatGPT thérapeute, intelligence artificielle bien-être",
+      "mainEntityOfPage": "https://www.jeremyai.tech/blog/therapeute-ia-confidentialite-rgpd.html"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Puis-je utiliser ChatGPT pour rédiger mes comptes rendus de séance ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pas avec des informations identifiantes dans un outil grand public : ces comptes rendus contiennent des données de santé, protégées par le RGPD. Si vous voulez automatiser cette tâche, il faut un outil professionnel avec des garanties contractuelles et un hébergement adapté, et l'évaluer avant de l'utiliser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les naturopathes et sophrologues sont-ils concernés par le RGPD ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le RGPD s'applique à toute personne qui traite des données personnelles dans un cadre professionnel, quel que soit le statut. Les informations sur la santé de vos clients sont des données sensibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je installer un chatbot IA sur mon site ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, pour les questions pratiques (tarifs, horaires, déroulé d'une séance, prise de rendez-vous). Il doit indiquer clairement qu'il s'agit d'une IA et ne jamais donner de conseil sur une situation personnelle : il doit renvoyer vers vous."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment anonymiser correctement un cas ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Retirez tout ce qui pourrait permettre de reconnaître la personne, même indirectement : nom, initiales, dates, lieu, profession, situation familiale rare, événements marquants. Si le cas reste reconnaissable par quelqu'un qui connaît la personne, il n'est pas anonymisé."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://www.jeremyai.tech/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.jeremyai.tech/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Thérapeute, IA et confidentialité",
+          "item": "https://www.jeremyai.tech/blog/therapeute-ia-confidentialite-rgpd.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    :root {
+      --bg: #05060f;
+      --cyan: #22d3ee;
+      --violet: #a78bfa;
+      --magenta: #e879f9;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --card: rgba(15, 20, 40, 0.6);
+      --border: rgba(34, 211, 238, 0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+    .parallax-layer { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.3; }
+    .orb-1 { width: 45vw; height: 45vw; background: radial-gradient(circle, var(--violet), transparent 70%); top: -10%; left: -12%; }
+    .orb-2 { width: 38vw; height: 38vw; background: radial-gradient(circle, var(--cyan), transparent 70%); top: 60%; right: -10%; }
+    .grid-layer {
+      position: fixed; inset: 0; z-index: 1; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(34,211,238,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34,211,238,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 75%);
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(5, 6, 15, 0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-weight: 700; font-size: 1.05rem; letter-spacing: 0.05em;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-decoration: none;
+    }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--cyan); }
+    @media (max-width: 640px) { nav ul { display: none; } }
+
+    main {
+      position: relative; z-index: 2;
+      max-width: 800px; margin: 0 auto;
+      padding: 7.5rem 1.5rem 4rem;
+    }
+    .breadcrumb { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.8rem; }
+    .breadcrumb a { color: var(--cyan); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 1rem; border: 1px solid var(--border); border-radius: 999px;
+      font-size: 0.8rem; color: var(--cyan); background: var(--card); margin-bottom: 1.2rem;
+    }
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.15; font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, var(--cyan) 0%, var(--violet) 50%, var(--magenta) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; }
+    .lead {
+      color: var(--muted); font-style: italic;
+      border-left: 3px solid var(--cyan); padding: 0.3rem 0 0.3rem 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+    article h2 {
+      font-size: clamp(1.3rem, 3vw, 1.6rem); font-weight: 700;
+      margin: 2.8rem 0 1rem; padding-left: 1rem; position: relative; line-height: 1.3;
+    }
+    article h2::before {
+      content: ''; position: absolute; left: 0; top: 0.25em; bottom: 0.25em; width: 4px;
+      border-radius: 4px; background: linear-gradient(180deg, var(--cyan), var(--violet));
+    }
+    article h3 { font-size: 1.1rem; margin: 1.8rem 0 0.6rem; color: var(--cyan); }
+    article p { margin-bottom: 1.1rem; }
+    article a { color: var(--cyan); }
+    article strong { color: #fff; }
+    .cta-box {
+      margin-top: 3.5rem; text-align: center;
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 2.5rem 1.5rem; backdrop-filter: blur(8px);
+    }
+    .cta-box h2 { padding-left: 0; margin: 0 0 0.8rem; }
+    .cta-box h2::before { display: none; }
+    .cta-box p { color: var(--muted); max-width: 560px; margin: 0 auto 1.5rem; }
+    .btn {
+      display: inline-block; padding: 0.85rem 1.8rem; border-radius: 10px; text-decoration: none;
+      font-weight: 600; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      color: #05060f !important; box-shadow: 0 0 25px rgba(34, 211, 238, 0.3);
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(34, 211, 238, 0.5); }
+    .btn-ghost {
+      display: inline-block; padding: 0.85rem 1.8rem; border-radius: 10px; text-decoration: none;
+      font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border);
+      color: var(--text) !important; background: var(--card); transition: transform 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--cyan); transform: translateY(-2px); }
+    .back-row { margin-top: 3rem; }
+    footer {
+      position: relative; z-index: 2; text-align: center; padding: 3rem 1.5rem;
+      color: var(--muted); font-size: 0.85rem;
+      border-top: 1px solid var(--border); background: rgba(5, 6, 15, 0.8);
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+    article ul, article ol { margin: 0 0 1.2rem 1.4rem; }
+    article li { margin-bottom: .5rem; }
+    .tldr { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--cyan); border-radius: 12px; padding: 1.2rem 1.4rem; margin: 1.5rem 0 2rem; }
+    .tldr p:last-child, .tldr ul:last-child { margin-bottom: 0; }
+    .tldr-title { font-weight: 700; color: #fff; margin-bottom: .5rem !important; }
+    .prompt { background: rgba(5, 6, 15, 0.7); border: 1px dashed var(--border); border-radius: 10px; padding: 1rem 1.2rem; margin: 0 0 1.4rem; font-size: .95rem; color: var(--text); white-space: pre-wrap; }
+    .table-wrap { overflow-x: auto; margin: 0 0 1.5rem; }
+    article table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    article th, article td { border: 1px solid var(--border); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+    article th { color: #fff; background: var(--card); }
+  </style>
+</head>
+<body>
+
+  <div class="grid-layer" aria-hidden="true"></div>
+  <div class="parallax-layer" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <nav>
+    <a class="logo" href="/">JEREMYAI.TECH</a>
+    <ul>
+      <li><a href="/#pourquoi">Pourquoi l'IA</a></li>
+      <li><a href="/#secteurs">Votre métier</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
+      <li><a href="/#contact">Passer à l'action</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article>
+      <p class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Thérapeute, IA et confidentialité</p>
+      <div class="badge">🌿 Santé &amp; bien-être</div>
+      <h1>Thérapeute et IA : <span class="gradient-text">gagner du temps</span> sans mettre en danger la confidentialité</h1>
+      <p class="meta">Publié le 6 octobre 2026 · Temps de lecture : 8 min · Par Jérémy GONIN</p>
+      <p class="lead">Pour un praticien du bien-être, l'IA peut faire gagner des heures : communication, contenus, organisation, supports d'atelier. Mais votre métier repose sur la confiance, et ce que vos clients vous confient relève souvent de données de santé. Voici comment profiter de l'IA en traçant une frontière nette.</p>
+
+      <div class="tldr">
+        <p class="tldr-title">L'essentiel en 30 secondes</p>
+        <ul>
+          <li>Les informations sur la santé physique ou psychique d'une personne sont des <strong>données sensibles</strong> au sens du RGPD (article 9).</li>
+          <li>Règle d'or : <strong>rien qui permette d'identifier un client</strong> dans un outil d'IA grand public.</li>
+          <li>L'IA est idéale pour tout ce qui ne concerne pas un client précis : site, réseaux sociaux, ateliers, administratif, emails types.</li>
+          <li>Pour des usages avec données clients, il faut un outil professionnel, un contrat adapté et une réflexion préalable.</li>
+        </ul>
+      </div>
+
+      <h2>Pourquoi la prudence s'impose</h2>
+      <p>Le RGPD classe les données concernant la santé parmi les « catégories particulières de données », dont le traitement est en principe interdit sauf exceptions encadrées. Or un compte rendu de séance, un motif de consultation ou un bilan de vitalité en contiennent presque toujours. Saisir ces éléments dans un assistant IA grand public revient à les transmettre à un tiers, parfois hors de l'Union européenne, et selon l'offre utilisée, ils peuvent servir à améliorer les modèles.</p>
+      <p>À cela s'ajoute la déontologie : quel que soit votre statut, vos clients attendent la même discrétion que chez un professionnel de santé.</p>
+
+      <h2>Le feu tricolore : ce que vous pouvez confier à l'IA</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>Usages</th></tr></thead>
+          <tbody>
+            <tr><td>🟢 <strong>Sans risque</strong></td><td>Textes du site et de la fiche Google, publications réseaux sociaux, newsletter, supports d'atelier, présentation de vos méthodes, emails types (confirmation, rappel de rendez-vous), FAQ, devis et factures sans détail de santé.</td></tr>
+            <tr><td>🟠 <strong>Avec anonymisation stricte</strong></td><td>Préparer une trame de séance ou un programme type à partir d'un cas <em>fictif ou généralisé</em> (« une femme de 40 ans souffrant de troubles du sommeil »), sans nom, date, lieu ni détail reconnaissable.</td></tr>
+            <tr><td>🔴 <strong>À proscrire dans un outil grand public</strong></td><td>Notes de séance, comptes rendus, bilans nominatifs, échanges avec un client, enregistrements audio de consultation.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>5 règles simples pour utiliser l'IA en confiance</h2>
+      <ol>
+        <li><strong>Anonymiser par défaut</strong> : ni nom, ni initiales, ni date de naissance, ni ville, ni profession rare. Un cas doit pouvoir correspondre à des centaines de personnes.</li>
+        <li><strong>Désactiver l'entraînement</strong> : dans les paramètres de ChatGPT, Claude ou Gemini, vérifiez l'option qui autorise l'utilisation de vos conversations pour améliorer les modèles, et désactivez-la. Les offres professionnelles (équipe, entreprise) l'excluent généralement par contrat.</li>
+        <li><strong>Garder vos dossiers clients hors de l'IA</strong> : vos fiches restent dans votre logiciel de gestion ou votre dossier sécurisé, pas dans l'historique d'un chatbot.</li>
+        <li><strong>Ne jamais laisser l'IA conseiller un client directement</strong> : un chatbot sur votre site peut répondre aux questions pratiques (tarifs, accès, déroulé d'une séance), jamais donner un avis sur une situation personnelle. Et depuis le 2 août 2026, l'AI Act impose d'indiquer clairement à l'utilisateur qu'il échange avec une IA.</li>
+        <li><strong>Mettre à jour votre politique de confidentialité</strong> : si vous utilisez des outils d'IA dans votre activité, dites-le, et précisez qu'aucune donnée de santé n'y est saisie.</li>
+      </ol>
+
+      <h2>3 prompts sans risque pour commencer</h2>
+      <div class="prompt">Je suis [naturopathe / sophrologue] à [ville]. Rédige 5 idées de publications Instagram pour expliquer ma méthode à des personnes qui n'ont jamais consulté. Ton bienveillant, sans promesse de guérison, sans vocabulaire médical.</div>
+      <div class="prompt">Crée le déroulé d'un atelier collectif de 2 heures sur [thème : gestion du stress, sommeil…] pour 8 participants : objectifs, séquences minutées, exercices pratiques, support à distribuer.</div>
+      <div class="prompt">Rédige l'email de confirmation envoyé après une prise de rendez-vous : rappel de la date, adresse et accès, durée, comment se préparer, conditions d'annulation. Ton chaleureux, 120 mots.</div>
+      <p>Attention à un dernier point : les contenus publiés ne doivent jamais laisser entendre que vos pratiques remplacent un traitement médical. Demandez explicitement à l'IA d'éviter toute allégation thérapeutique, et relisez.</p>
+      <p>Pour l'ensemble des usages (agenda, ateliers, visibilité locale), consultez notre guide <a href="/metiers/therapeute.html">IA pour thérapeute : 7 usages concrets</a>.</p>
+      <h2>Questions fréquentes</h2>
+      <h3>Puis-je utiliser ChatGPT pour rédiger mes comptes rendus de séance ?</h3>
+      <p>Pas avec des informations identifiantes dans un outil grand public : ces comptes rendus contiennent des données de santé, protégées par le RGPD. Si vous voulez automatiser cette tâche, il faut un outil professionnel avec des garanties contractuelles et un hébergement adapté, et l'évaluer avant de l'utiliser.</p>
+
+      <h3>Les naturopathes et sophrologues sont-ils concernés par le RGPD ?</h3>
+      <p>Oui. Le RGPD s'applique à toute personne qui traite des données personnelles dans un cadre professionnel, quel que soit le statut. Les informations sur la santé de vos clients sont des données sensibles.</p>
+
+      <h3>Puis-je installer un chatbot IA sur mon site ?</h3>
+      <p>Oui, pour les questions pratiques (tarifs, horaires, déroulé d'une séance, prise de rendez-vous). Il doit indiquer clairement qu'il s'agit d'une IA et ne jamais donner de conseil sur une situation personnelle : il doit renvoyer vers vous.</p>
+
+      <h3>Comment anonymiser correctement un cas ?</h3>
+      <p>Retirez tout ce qui pourrait permettre de reconnaître la personne, même indirectement : nom, initiales, dates, lieu, profession, situation familiale rare, événements marquants. Si le cas reste reconnaissable par quelqu'un qui connaît la personne, il n'est pas anonymisé.</p>
+
+      <div class="cta-box">
+        <h2>Besoin d'un cadre clair pour votre cabinet ?</h2>
+        <p>Coaching, automatisation, formation : Jérémy GONIN, consultant IA en Nord-Isère, accompagne les indépendants et TPE partout en France, en présentiel ou à distance.</p>
+        <p>
+          <a href="https://www.jeremyai.fr/" class="btn">Découvrir l'accompagnement →</a>
+          <a href="/#contact" class="btn-ghost">Parlons de votre activité</a>
+        </p>
+      </div>
+      <p class="back-row"><a href="/blog/" style="color: var(--cyan); text-decoration: none;">← Retour au blog</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 jeremyai.tech · L'IA par métier · Un site de <a href="https://www.jeremyai.fr/">Jérémy GONIN — Expert IA</a></p>
+  </footer>
+
+</body>
+</html>
