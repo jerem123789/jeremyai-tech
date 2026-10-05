@@ -19,6 +19,16 @@ Guides détaillés et cas d'usage IA actionnables, métier par métier :
 - Aucune compétence technique requise pour les usages de base
 - Principe directeur répété dans tous les guides : l'IA prépare, le professionnel valide. La responsabilité (normative, sanitaire, juridique, déontologique) reste toujours humaine.
 
+
+## Articles du blog
+
+- [AI Act : ce que les TPE et indépendants doivent vraiment faire en 2026](https://www.jeremyai.tech/blog/ai-act-tpe-obligations-2026.html) — calendrier à jour après l'Omnibus numérique (règlement (UE) 2026/1744), transparence depuis le 2 août 2026 (article 50), formation (article 4), checklist en 6 points.
+- [IA pour électricien : 6 prompts prêts à copier](https://www.jeremyai.tech/blog/ia-electricien-prompts-devis-rapports.html) — devis, compte rendu d'intervention, relance d'impayé, avis Google, qualification de prospect, fiche chantier.
+- [Rédiger une annonce immobilière avec l'IA](https://www.jeremyai.tech/blog/annonce-immobiliere-ia-methode.html) — méthode en 5 étapes, mentions obligatoires, home staging virtuel et transparence AI Act.
+- [Restaurant : répondre aux avis Google avec l'IA](https://www.jeremyai.tech/blog/restaurant-repondre-avis-google-ia.html) — prompt type, modèles de réponses (positif, mitigé, négatif), erreurs à éviter.
+- [Thérapeute et IA : gagner du temps sans risquer le secret](https://www.jeremyai.tech/blog/therapeute-ia-confidentialite-rgpd.html) — données de santé et RGPD, usages autorisés, 5 règles, prompts sans risque.
+- [IA pour plombier et chauffagiste : 7 usages concrets](https://www.jeremyai.tech/blog/ia-pour-plombier-chauffagiste.html) — devis depuis une photo, urgences 24h/24, relances, tournées, comptes rendus.
+
 ## Auteur
 
 Jérémy GONIN — expert et coach en intelligence artificielle, freelance, France. Accompagnement des indépendants et TPE/PME : coaching IA, automatisation, formation, création de sites web. Interventions en présentiel et visioconférence partout en France.
